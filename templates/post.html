@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+
+          <div class="blog-post">
+            <h1 class="blog-post-title">
+             {{ post.title }}
+            </h1>
+            <p class="blog-post-meta">{{ post.creation_date|date:'d, M Y' }} by <a href="#">{{ post.author }}</a></p>
+
+            {{ post.content|safe }}
+
+
+          <nav class="blog-pagination">
+            <a class="btn btn-ou  tline-primary" href="#">Older</a>
+            <a class="btn btn-outline-secondary disabled" href="#">Newer</a>
+          </nav>
+
+            {% endblock %}
